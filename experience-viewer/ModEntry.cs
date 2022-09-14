@@ -10,7 +10,7 @@ using StardewValley.Menus;
 using System.ComponentModel.Design;
 using System.Text.RegularExpressions;
 
-namespace TestMod
+namespace experienceviewer
 {
     /// <summary>The mod entry point.</summary>
     public class ModEntry : Mod

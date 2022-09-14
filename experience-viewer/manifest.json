@@ -1,9 +1,9 @@
 {
-  "Name": "TestMod",
+  "Name": "experience-viewer",
   "Author": "Elite",
   "Version": "1.0.0",
   "Description": "A test",
-  "UniqueID": "Elite.TestMod",
+  "UniqueID": "Elite.experience-viewer",
   "EntryDll": "TestMod.dll",
   "MinimumApiVersion": "3.0.0",
   "UpdateKeys": []
