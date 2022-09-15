@@ -1,0 +1,10 @@
+{
+  "Name": "ExperienceViewer",
+  "Author": "Elite",
+  "Version": "1.0.0",
+  "Description": "Used to display skills experience.",
+  "UniqueID": "Elite.ExperienceViewer",
+  "EntryDll": "ExperienceViewer.dll",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": []
+}

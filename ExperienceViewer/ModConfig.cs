@@ -1,11 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
+using StardewModdingAPI.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace experienceviewer
+namespace ExperienceViewer
 {
     class ModConfig
     {
@@ -14,5 +15,7 @@ namespace experienceviewer
         public bool DisplayHudMessage { get; set; } = false;
 
         public int HudMessageSecondLeft { get; set; } = 4;
+
+        public KeybindList ToggleKey { get; set; } = KeybindList.Parse("LeftShift + X");
     }
 }
