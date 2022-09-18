@@ -40,6 +40,12 @@ namespace ExperienceViewer
 
         List<int> experienceLimitPerLevel = new List<int>() { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000};
 
+        private string[] getRgbaList()
+        {
+            string rgba = this.Config.RgbaMessageColor;
+            return Regex.Replace(rgba, @"\s", "").Split(",");
+        }
+
         private void sendExperienceMessage()
         {
             Farmer farmer = Game1.player;
@@ -56,8 +62,7 @@ namespace ExperienceViewer
             if (this.Config.DisplayHudMessage == false)
             {
                 string lineBreak = string.Concat(Enumerable.Repeat(" ", 10));
-                string rgba = this.Config.RgbaMessageColor;
-                string[] rgbaList = Regex.Replace(rgba, @"\s", "").Split(",");
+                string[] rgbaList = getRgbaList();
                 Game1.chatBox.addMessage("Your xp: " + text, new Color(parse(rgbaList[0]), parse(rgbaList[1]), parse(rgbaList[2]), parse(rgbaList[3]))); // Default Color: 176, 224, 230, 255 //
                 Game1.chatBox.addMessage(lineBreak, Color.White);
 
@@ -82,8 +87,7 @@ namespace ExperienceViewer
             // Send a message to this mod on all players //
             SkillUp skillUpMessage = new SkillUp(e.Player.Name, "has just reached level", e.NewLevel, e.Skill.ToString());
 
-            string rgba = this.Config.RgbaMessageColor;
-            string[] rgbaList = Regex.Replace(rgba, @"\s", "").Split(",");
+            string[] rgbaList = getRgbaList();
 
             Game1.chatBox.addMessage(skillUpMessage.setupCompleteMessage(), new Color(parse(rgbaList[0]), parse(rgbaList[1]), parse(rgbaList[2]), parse(rgbaList[3])));
         }
